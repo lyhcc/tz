@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <link href="../font/demo.css" rel="stylesheet"/>
+    <link href="../font/iconfont.css" rel="stylesheet"/>
+    <link href="../css/a.css" rel="stylesheet"/>
+    <link href="../css/menu.css" rel="stylesheet"/>
+    <link href="../css/index.css" rel="stylesheet"/>
+    <link href="../css/fold-menu.css" rel="stylesheet"/>
+    <style>
+        .clearfix{
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+        <!--<i class="first-line-div-menu iconfont icon-menu"></i>-->
+        <nav class="menu-nav">
+            <div id="toggleMenu" class="menu-div">
+                <span id="hide"></span>
+                <span id="show"></span>
+            </div>
+            <ul id="list" class="menu-ul">
+                <li class="menu-li">
+                    <a class="menu-a" href="index.html">总体情况</a>
+                </li>
+
+                <li class="menu-li">
+                    <a class="menu-a" href="GuaKe.html">挂科情况</a>
+                </li>
+                <li class="menu-li">
+                    <a  class="menu-a"href="#">学习预警</a>
+                </li>
+                <li class="menu-li">
+                    <a  class="menu-a"href="#">关注</a>
+                </li>
+                <li class="menu-li">
+                    <a  class="menu-a"href="#">发现</a>
+                </li>
+            </ul>
+            <div><a href="index.html"><i class="iconfont icon-refresh refresh" style="transition: all 0.3s" id="Rotate" onclick="Rotate()"></i></a></div>
+            <div class="message"><img class="message-img"src="http://img3.redocn.com/tupian/20160108/lvsehuahuizhizhangfanyexiaoguobeijingsucai_5728265.jpg">ABC</div>
+
+        </nav>
+        <div class="semester">
+            <div class="semester" id="semester" >
+                <select class="select1">
+                    <option id="option1">2015-2016-1</option>
+                    <option id="option2">2015-2016-2</option>
+                    <option id="option3">2016-2017-1</option>
+                    <option id="option4">2016-2017-2</option>
+                    <option id="option5">2017-2018-1</option>
+                    <option id="option6">2017-2018-2</option>
+                    <option id="option7">2018-2019-1</option>
+                    <option id="option8">2018-2019-2</option>
+                </select>
+            </div>
+        </div>
+        <div class="grade-and-subject">
+            <div class="grade" id="grade">
+                <select class="select2" style="width: 100%;">
+                    <option>软件工程一班</option>
+                    <option>软件工程二班</option>
+                    <option>网络工程一班</option>
+                    <option>网络工程二班</option>
+                    <option>信息安全一班</option>
+                    <option>信息安全二班</option>
+                    <option>信息安全三班</option>
+                    <option>计算机科学与技术一班</option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </div>
+            <div class="subject" id="subject">
+                <div id="menu_title1" class="first-subject-div d" ><i class="iconfont icon-arrowdown k" ></i><div id="first"></div></div>
+                <div class="fold-menus mk" id="fold-menus">
+
+                    <div id="menu_title2" class="fold-menu_title" onclick="openMenu(this)">
+                        必修
+                        <div class="fold-indicator" id="indicator2"><i class="iconfont icon--xiala"></i></div>
+                    </div>
+                    <div class="fold-menu" id="menu2">
+                        <div class="fold-item">
+                            <a href="#" id="a11" onclick="getV(this)">高等数学</a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a12" onclick="getV(this)">普通物理</a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a13"onclick="getV(this)">大学体育</a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a14"onclick="getV(this)">大学英语</a>
+                        </div>
+                    </div>
+
+                    <li class="fold-menu_divider"></li>
+
+                    <div id="menu_title3" class="fold-menu_title" onclick="openMenu(this)">
+                        选修
+                        <div class="fold-indicator" id="indicator3"><i class="iconfont icon--xiala"></i></div>
+                    </div>
+                    <div class="fold-menu" id="menu3">
+                        <div class="fold-item">
+                            <a href="#" id="a31"onclick="getV(this)">地区与行星科学</a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a32"onclick="getV(this)">艺术设计</a>
+                        </div>
+                    </div>
+
+                    <li class="fold-menu_divider"></li>
+
+                    <div id="menu_title4" class="fold-menu_title" onclick="openMenu(this)">
+                        <div class="fold-indicator" id="indicator4"><i class="iconfont icon--xiala"></i></div>
+                        专业基础课
+                    </div>
+                    <div class="fold-menu" id="menu4">
+                        <div class="fold-item">
+                            <a href="#" id="a41"onclick="getV(this)">C语言程序设计</a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a42"onclick="getV(this)">数据结构</a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a43"onclick="getV(this)">Web </a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a44"onclick="getV(this)">Java程序设计</a>
+                        </div>
+                    </div>
+                    <li class="fold-menu_divider"></li>
+
+                    <div id="menu_title5" class="fold-menu_title" onclick="openMenu(this)">
+                        专业课
+                        <div class="fold-indicator" id="indicator5"><i class="iconfont icon--xiala"></i></div>
+                    </div>
+                    <div class="fold-menu" id="menu5">
+                        <div class="fold-item">
+                            <a href="#" id="a51"onclick="getV(this)">地区与行星科学</a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a52"onclick="getV(this)">艺术设计</a>
+                        </div>
+                    </div>
+                    <li class="fold-menu_divider"></li>
+
+                    <div id="menu_title6" class="fold-menu_title" onclick="openMenu(this)">
+                        课程设计
+                        <div class="fold-indicator" id="indicator6"><i class="iconfont icon--xiala"></i></div>
+                    </div>
+                    <div class="fold-menu" id="menu6">
+                        <div class="fold-item">
+                            <a href="#" id="a61"onclick="getV(this)">地区与行星科学</a>
+                        </div>
+                        <li class="fold-item_divider"></li>
+                        <div class="fold-item">
+                            <a href="#" id="a62"onclick="getV(this)">艺术设计</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="section-1" id="section-1">
+                <aside class="aside-1">
+                        <table>
+                            <tr >
+                                <th>姓名</th>
+                                <th>分数</th>
+                            </tr>
+                            <tr>
+                                <td id="name1" onclick="Open(this)">李四</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td id="name2" onclick="Open(this)">张三</td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td id="name3" onclick="Open(this)">赵六</td>
+                                <td>60</td>
+                            </tr>
+                        </table>
+                </aside>
+        </section>
+        <section class="section-2" id="close">
+            <aside class="aside-2">
+                <span><i class="iconfont icon-close close" onclick="Close()" id="r_otate"></i></span>
+                    <table>
+                        <tr>
+                            <th id="name">张三</th>
+                            <th id="number">190505011</th>
+                            <th id="rank">总排名 3</th>
+                        </tr>
+                        <tr>
+                            <td id="b11">Java 程序设计</td>
+                            <td colspan="2" id="c11">80</td>
+                        </tr>
+                        <tr>
+                            <td id="b12">C语言程序设计</td>
+                            <td colspan="2" id="c12">90</td>
+                        </tr>
+                        <tr>
+                            <td id="b13">高等数学</td>
+                            <td colspan="2" id="c13">70</td>
+                        </tr>
+                        <tr>
+                            <td id="b14">普通物理</td>
+                            <td id="c14"colspan="2">80</td>
+                        </tr>
+                        <tr>
+                            <td id="b15">线性代数</td>
+                            <td colspan="2" id="c15">88</td>
+                        </tr>
+                        <tr>
+                            <td id="b16">离散数学</td>
+                            <td colspan="2" id="c16">90</td>
+                        </tr>
+                        <tr>
+                            <td id="b17">大学英语</td>
+                            <td colspan="2" id="c17">70</td>
+                        </tr>
+                        <tr>
+                            <td  id="b19">Web</td>
+                            <td colspan="2" id="c19">90</td>
+                        </tr>
+                        <tr>
+                        <td id="b21"></td>
+                        <td id="c21"colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td id="b22"></td>
+                            <td id="c22"colspan="2"></td>
+                        </tr>
+
+                    </table>
+            </aside>
+        </section>
+        <script src="../js/index.js"></script>
+</body>
+</html>

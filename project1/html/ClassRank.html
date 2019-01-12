@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <link href="../font/demo.css" rel="stylesheet"/>
+    <link href="../font/iconfont.css" rel="stylesheet"/>
+    <link href="../css/a.css" rel="stylesheet"/>
+    <link href="../css/menu.css" rel="stylesheet"/>
+    <link href="../css/index.css" rel="stylesheet"/>
+    <link href="../css/fold-menu.css" rel="stylesheet"/>
+    <script src="../js/fold-menu.js"></script>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <style>
+        a{
+            text-decoration: none;
+            color: rgb(00,00,00);
+        }
+        a:hover{
+            text-decoration: none;
+            color:black;
+        }
+        .panel{
+            background: #ffffff;
+            border:none;
+            transition:  all 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+<nav class="menu-nav">
+    <div id="toggleMenu" class="menu-div">
+        <span id="hide"></span>
+        <span id="show"></span>
+    </div>
+    <ul id="list" class="menu-ul">
+        <li class="menu-li">
+            <a class="menu-a" href="ClassRank.html">总体情况</a>
+        </li>
+        <li class="menu-li">
+        <a  class="menu-a"href="index2.html">班级情况</a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a" href="GuaKe.html">挂科情况</a>
+        </li>
+        <li class="menu-li">
+            <a  class="menu-a"href="#">学籍预警</a>
+        </li>
+
+        <li class="menu-li">
+            <a  class="menu-a"href="help.html">帮助</a>
+        </li>
+    </ul>
+
+    <div><a href="ClassRank.html"><i class="iconfont icon-refresh refresh" style="transition: all 0.3s" id="Rotate" onclick="Rotate()"></i></a></div>
+    <div class="message"><img class="message-img"src="http://img3.redocn.com/tupian/20160108/lvsehuahuizhizhangfanyexiaoguobeijingsucai_5728265.jpg">ABC</div>
+
+</nav>
+
+<div class="semester">
+    <div class="semester" id="semester" >
+        <select class="select1">
+            <option id="option1">2015-2016-1</option>
+            <option id="option2">2015-2016-2</option>
+            <option id="option3">2016-2017-1</option>
+            <option id="option4">2016-2017-2</option>
+            <option id="option5">2017-2018-1</option>
+            <option id="option6">2017-2018-2</option>
+            <option id="option7">2018-2019-1</option>
+            <option id="option8">2018-2019-2</option>
+        </select>
+    </div>
+</div>
+
+    <section class="section-1">
+        <div class="frame panel-group" id="accordion">
+            <div >
+                <div class="div1-spacial vertical-divider"style="font-weight: bold">班级</div>
+                <div class="div2-spacial"style="font-weight: bold">排名</div>
+            </div>
+            <div class="panel">
+                <div  data-toggle="collapse" data-target="#p1" data-parent="#accordion">
+                    <a class="div1-spacial vertical-divider" href="index2.html">班级1</a><!--说明:在访问index2.html时需要把对应的班级传过去-->
+                    <div class="div2-spacial">排名1</div>
+                </div>
+                <div id="p1" class="collapse">
+                    <div class="div1 linear-divider">挂科人数<br/>6人</div>
+                    <div class="div1 linear-divider">学籍预警人数<br/>6人</div>
+                    <div class="div2 linear-divider">挂科率<br/>3%</div>
+                </div>
+            </div>
+            <div class="panel" >
+                <div  data-toggle="collapse" data-target="#p2"  data-parent="#accordion">
+                    <a href="index2.html"class="div1-spacial vertical-divider">班级2</a><!--说明:在访问index2.html时需要把对应的班级传过去-->
+                    <div class="div2-spacial">排名2</div>
+                </div>
+                <div id="p2" class="collapse">
+                    <div class="div1 linear-divider">挂科人数<br/>6人</div>
+                    <div class="div1 linear-divider">学籍预警人数<br/>6人</div>
+                    <div class="div2 linear-divider">挂科率<br/>3%</div>
+                </div>
+            </div>
+            <div class="panel" >
+            <div  data-toggle="collapse" data-target="#p3"  data-parent="#accordion">
+                <a class="div1-spacial vertical-divider" href="index2.html">班级3</a><!--说明:在访问index2.html时需要把对应的班级传过去-->
+                <div class="div2-spacial">排名3</div>
+            </div>
+            <div id="p3" class="collapse">
+                <div class="div1 linear-divider">挂科人数<br/>6人</div>
+                <div class="div1 linear-divider">学籍预警人数<br/>6人</div>
+                <div class="div2 linear-divider">挂科率<br/>3%</div>
+            </div>
+            </div>
+            <div class="panel" >
+                <div  data-toggle="collapse" data-target="#p4"  data-parent="#accordion">
+                    <a class="div1-spacial vertical-divider" href="index2.html">班级4</a><!--说明:在访问index2.html时需要把对应的班级传过去-->
+                    <div class="div2-spacial">排名4</div>
+                </div>
+                <div id="p4" class="collapse">
+                    <div class="div1 linear-divider ">挂科人数<br/>6人</div>
+                    <div class="div1 linear-divider">学籍预警人数<br/>6人</div>
+
+                    <div class="div2 linear-divider">挂科率<br/>3%</div>
+                </div>
+            </div>
+            <div class="panel" >
+                <div  data-toggle="collapse" data-target="#p5"  data-parent="#accordion">
+                    <a class="div1-spacial vertical-divider" href="index2.html">班级5</a><!--说明:在访问index2.html时需要把对应的班级传过去-->
+                    <div class="div2-spacial">排名5</div>
+                </div>
+                <div id="p5" class="collapse">
+                    <div class="div1 linear-divider ">挂科人数<br/>6人</div>
+                    <div class="div1 linear-divider">学籍预警人数<br/>6人</div>
+                    <div class="div2 linear-divider">挂科率<br/>3%</div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <aside class="rank">
+        <div id="Div">
+            <div class="rank-passage " onclick="setSelected(this)" id="l1">15</div>
+            <div class="rank-passage"onclick="setSelected(this)"id="l2">16</div>
+            <div class="rank-passage"onclick="setSelected(this)"id="l3">17</div>
+            <div class="rank-passage"onclick="setSelected(this)"id="l4">18</div>
+        </div>
+        <div onclick="Click()"  id="dc"><i class="iconfont icon-down-circle down-circle"></i></div>
+    </aside>
+<script src="../js/menu.js"></script>
+<script src="../js/ClassRank.js"></script>
+
+</body>
+</html>

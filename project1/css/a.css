@@ -1,0 +1,63 @@
+.div1,.div2,.div1-spacial,.div2-spacial{
+
+    background: rgba(234, 233, 234, 0.64);
+    text-align: center;
+
+    float: left;
+}
+.div1,.div2{
+    width:33%;
+    padding-top: 10px;
+    font-size:40px;
+    line-height:40px;
+    font-weight: lighter;
+    height:100px;
+}
+.div2{
+    width: 34%;
+}
+.div1-spacial,.div2-spacial{
+    background: rgba(182, 180, 182, 0.69);
+    font-size:60px;
+    width: 50%;
+    font-weight: 100;
+    border-bottom: 1px solid #9f9f9f;
+}
+.linear-divider{
+    border-top:1px solid #9f9f9f;
+}
+.frame{
+    width: 80%;
+}
+.vertical-divider{
+    border-right:1px solid #9f9f9f
+}
+.rank{
+    position: absolute;
+    right: 20px;
+    bottom:200px;
+    font-size: 50px;
+    line-height: 100px;
+    width: 100px;
+    background: rgba(179, 179, 179, 0.32);
+    text-align: center;
+    border-radius: 40px;
+    color: rgba(0, 0, 0, 0.53);
+
+}
+#Div{
+    overflow: hidden;
+    /*display: none;*/
+    height:0;
+}
+.rank-passage{
+    margin:5px;
+   border-radius: 50%;
+    background: rgba(242, 241, 242, 0.5);
+}
+.down-circle{
+    font-size: 60px;
+}
+#l1{
+    background: green;
+}

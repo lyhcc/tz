@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/main.css" type="text/css" rel="stylesheet"/>
+    <SCRIPT language=JavaScript>
+    function MM_jumpMenu(targ,selObj,restore){
+        eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+        if (restore) selObj.selectedIndex=0;
+    }
+    </SCRIPT>
+</head>
+<body>
+    <section>
+        <aside class="main-aside">
+            <div class="div1">
+                <SELECT onchange="MM_jumpMenu('parent',this,0)">
+                    <option selected value="#">－请选择登录身份－</option>
+                    <option value="index.html">任课老师</option>
+                    <option value="index.html">班主任</option>
+                    <option value="ClassRank.html">辅导员</option>
+                    <option value="ClassRank.html">副院长</option>
+                    <option value="#">院长</option>
+                </SELECT>
+            </div>
+        </aside>
+    </section>
+</body>
+</html>

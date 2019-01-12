@@ -1,0 +1,106 @@
+.menu-nav{
+    width: 100%;
+    height: 80px;
+    background: rgba(29, 30, 32, 0.93);
+    position: relative;
+}
+.menu-div{
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    left: 20px;
+    cursor: pointer;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+}
+#hide,#show{
+    display: block;
+    height: 3px;
+    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+#show{
+    width: 20px;
+    left: 15px;
+    opacity: 0;
+}
+#hide{
+    width: 30px;
+    left: 10px;
+    margin-top: -1.5px;
+}
+#hide::before,#hide::after,#show::before,#show::after{
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #FFF;
+    position: absolute;
+}
+#hide::before,#hide::after{
+    width: 30px;
+}
+#show::before,#show::after{
+    width: 25px;
+}
+#hide::before,#show::before{
+    top: -10px;
+}
+#hide::after,#show::after{
+    top: 10px;
+}
+#show::before{
+    -webkit-transform: rotate(35deg) translateX(5px);
+    -moz-transform: rotate(35deg) translateX(5px);
+    -ms-transform: rotate(35deg) translateX(5px);
+    -o-transform: rotate(35deg) translateX(5px);
+    transform: rotate(35deg) translateX(5px);
+}
+#show::after{
+    -webkit-transform: rotate(-35deg) translateX(5px);
+    -moz-transform: rotate(-35deg) translateX(5px);
+    -ms-transform: rotate(-35deg) translateX(5px);
+    -o-transform: rotate(-35deg) translateX(5px);
+    transform: rotate(-35deg) translateX(5px);
+}
+.menu-ul{
+    list-style: none;
+    background-color: #a2a5a8;
+    position: absolute;
+    top: 80px;
+    font-size: 60px;
+    left: -41%;
+    width: 40%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.menu-li{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /*left: -40px;*/
+    text-align: center;
+    width:100%;
+    border:2px solid black;
+}
+.menu-a{
+    text-decoration: none;
+    color:#FFF;
+    display: inline-block;
+    height: 60px;
+    line-height: 40px;
+}
+.menu-li:hover{
+    background-color: rgba(26,188, 156, 0.75);
+}
